@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1f7itghetxtb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vydke"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1jxwq"]
+
+[node name="GameManager" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="Mesh" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("PlaneMesh_vydke")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape3D_1jxwq")
